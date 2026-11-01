@@ -3,11 +3,12 @@
 업비트 Open API(`GET /v1/ticker`)로 비트코인(KRW-BTC) 현재가를 보여주는 모바일 웹앱입니다.
 
 ```
-브라우저 ──> /api/ticker (Vercel 서버리스 함수) ──> api.upbit.com/v1/ticker
+브라우저 ──> /api/ticker, /api/candles (Vercel 서버리스 함수) ──> api.upbit.com/v1/ticker, /v1/candles
 ```
 
 - `public/index.html` : 모바일 화면 (정적 파일)
-- `api/ticker.js` : 업비트 호출 프록시 (CORS 해결 + 2초 캐시)
+- `api/ticker.js` : 현재가 프록시 (CORS 해결 + 2초 캐시)
+- `api/candles.js` : 차트용 캔들 프록시 (`/v1/candles`, 10초 캐시)
 - 시세 조회 API는 인증이 필요 없어 API Key/환경변수가 없습니다.
 
 ## 배포 방법
