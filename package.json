@@ -1,0 +1,7 @@
+{
+  "name": "upbit-btc-ticker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "업비트 Open API로 비트코인 현재가를 보여주는 모바일 웹앱 (Vercel)",
+  "engines": { "node": ">=18" }
+}
